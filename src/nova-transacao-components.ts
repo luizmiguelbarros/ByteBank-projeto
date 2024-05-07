@@ -1,9 +1,4 @@
-let saldo = 3000;
-
-const elementoSaldo = document.querySelector(".saldo-valor .valor") as HTMLElement;
-if (elementoSaldo != null) {
-    elementoSaldo.textContent = saldo.toString();
-}
+// aqui vai ficar a parte do código onde cria novas transações. 
 
 const elementoFormulario = document.querySelector(".block-nova-transacao form") as HTMLFormElement;
 elementoFormulario.addEventListener("submit", function(event) {
