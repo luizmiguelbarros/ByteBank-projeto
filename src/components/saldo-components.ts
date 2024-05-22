@@ -1,19 +1,15 @@
 // e aqui vai ficar onde a parte de gerenciamento de saldo deve ficar
 
-import { formatarMoeda, formatarData } from "../utils/Formaters.js";
+import { formatarData, formatarMoeda } from "../utils/Formaters.js";
 import { FormatoData } from "../types/FormatoData.js";
-import Conta from "../types/conta.js";
+import Conta from "../types/Conta.js";
 
 const elementoSaldo = document.querySelector(".saldo-valor .valor") as HTMLElement;
 const elementoDataAcesso = document.querySelector(".block-saldo time") as HTMLElement;
 
-
-
 if (elementoDataAcesso != null) {
     elementoDataAcesso.textContent = formatarData(Conta.getDataAcesso(), FormatoData.DIA_SEMANA_DIA_MES_ANO);
-
 }
-
 
 renderizarSaldo();
 function renderizarSaldo(): void {
@@ -24,8 +20,8 @@ function renderizarSaldo(): void {
 
 const SaldoComponent = {
     atualizar() {
-        renderizarSaldo()
+        renderizarSaldo();
     }
 }
 
-export default SaldoComponent
+export default SaldoComponent;
